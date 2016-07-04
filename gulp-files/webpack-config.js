@@ -65,11 +65,13 @@ module.exports = {
             {
                 test: /\.(svg|woff|woff2|ttf|eot)$/,
                 loader: 'base64-font-loader'
-            }/*,
-             {
-             test: /\.html$/,
-             loader: 'ngtemplate?relativeTo=' + (path.resolve(__dirname, './source/src-code')) + '/!html'
-             },*/
+            },
+            {
+                test: /\.html$/,
+                loaders: ['ngtemplate', 'html'],
+                include: path.resolve('source', 'src-code'),
+                exclude: path.resolve('source', 'src-code/index.html')
+            }
         ]
     },
     postcss: function () {
