@@ -1,10 +1,10 @@
 /**
  * Created by Pratik on 6/28/2016.
  */
-
-import '../assets/main.scss';
+//import 'babel-polyfill';  //use if you want to have latest features
+import '../assets/index.scss';
 
 angular.module('weather', [])
-    .controller('myCtrl', function ($scope) {
-        $scope.products = ['Milk', 'Bread', 'Cheese'];
-    });
+	.controller('myCtrl', function ($scope) {
+		$scope.products = ['Milk', 'Bread', 'Cheese'];
+	});
